@@ -145,7 +145,7 @@
       <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Steam\steamapps\common\rocketleague\Binaries\Win32\bakkesmod\bakkesmodsdk\lib;%</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>C:\Users\Calle\source\repos\TrainingBackboard\bakkesmod-patch "$(TargetPath)"</Command>
+      <Command>$(SolutionDir)bakkes_patchplugin.py "$(TargetPath)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
