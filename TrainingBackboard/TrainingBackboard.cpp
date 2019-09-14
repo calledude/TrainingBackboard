@@ -6,7 +6,7 @@ void TrainingBackboard::OnFreeplayLoad(std::string eventName)
 {
 	auto sw = gameWrapper->GetGameEventAsServer();
 
-	if (!sw.IsPlayingTraining())
+	if (!sw.IsPlayingTraining() || gameWrapper->IsInCustomTraining())
 	{
 		return;
 	}
