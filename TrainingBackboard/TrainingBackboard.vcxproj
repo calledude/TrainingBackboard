@@ -145,7 +145,7 @@
       <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Steam\steamapps\common\rocketleague\Binaries\Win32\bakkesmod\bakkesmodsdk\lib;%</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>$(SolutionDir)bakkes_patchplugin.py "$(TargetPath)"</Command>
+      <Command>start xcopy /f /y  "$(OutDir)$(TargetFileName)" "C:\Program Files (x86)\Steam\steamapps\common\rocketleague\Binaries\Win32\bakkesmod\plugins\$(TargetFileName)*" &amp;&amp; $(SolutionDir)bakkes_patchplugin.py "$(TargetFileName)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
